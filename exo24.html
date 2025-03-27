@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar String Vazia</title>
+</head>
+<body>
+    <label for ="texto">Digite um texto:</label>
+    <input type="text" id="texto">
+    <button onclick="stringVazia(texto.value)">Verificar</button>
+    <p id="resultado"></p>
+    <script>
+        const stringVazia = str => {
+            if(str.length === 0){
+                resultado.textContent = "String Vazia!"
+            }
+            else{
+                resultado.textContent = "Conteúdo da String: " + str;
+            }
+        }
+    </script>
+</body>
+</html>

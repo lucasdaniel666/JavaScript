@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Média - Array</title>
+</head>
+<body>
+    <h2>Calcular Média</h2>
+    <label>Digite números separados por vírgula:</label>
+    <input type="text" id="numeros">
+    <button onclick="calcularMedia()">Calcular</button>
+    <p id="resultadoMedia"></p>
+    <script>
+        function calcularMedia() {
+            let entrada = document.getElementById("numeros").value;
+            let arrayNum = entrada.split(","); // transforma em array de substring
+            let soma = 0;
+            let total = arrayNum.length;
+            for (let i = 0; i < total; i++) {
+                soma += parseFloat(arrayNum[i]);
+            }
+            let media = soma / total;
+            document.getElementById("resultadoMedia").textContent = "Média: " + media;
+        }
+    </script>
+</body>
+</html>

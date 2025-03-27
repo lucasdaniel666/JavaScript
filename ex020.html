@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>função para achar o numero primo</title>
+
+</head>
+<body>
+    <label for="numero">Digite o numero:</label>
+    <input type="number" id="numero">
+    <button onclick="calcularPrimo()">verificar</button>
+    
+    <p id="resultadoPrimo"></p>
+
+    <script>
+        function calcularPrimo() {
+            let num = parseInt(document.getElementById("numero").value);
+            let primo = num > 1;
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    primo = false;
+                    break;
+                }
+            }
+
+            resultado = primo ? "É primo" : "Não é primo";
+
+            document.getElementById("resultadoPrimo").textContent =  resultado;
+        }
+    </script>
+
+    
+</body>
+</html>

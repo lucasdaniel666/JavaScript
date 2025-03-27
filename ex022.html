@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Letra</title>
+</head>
+<body>
+    <h2>Contar Ocorrências de uma Letra</h2>
+    <label>Digite uma frase:</label>
+    <input type="text" id="frase">
+    <br>
+    <label>Digite a letra:</label>
+    <input type="text" id="letra" maxlength="1">
+    <button onclick="contarLetra()">Contar</button>
+    <p id="resultadoLetra"></p>
+    <script>
+        function contarLetra() {
+            let frase = document.getElementById("frase").value.toLowerCase();
+            let letra = document.getElementById("letra").value.toLowerCase();
+            let contador = 0;
+            for (let i = 0; i < frase.length; i++) {
+                if (frase[i] === letra) {
+                    contador++;
+                }
+            }
+            document.getElementById("resultadoLetra").textContent = "A letra '" + letra + "' aparece " + contador + " vezes.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iteração com o for of</title>
+</head>
+<body>
+    <h1>Iteração com um array</h1>
+    <div id="resultado"></div>
+    <script>
+        const numeros = [1,2,3,4,5];
+        let resultadoDiv = document.getElementById("resultado");
+        let output = "";
+        for(const numero of numeros){
+            output += numero + "<br>";
+        }
+        resultadoDiv.innerHTML = output;
+    </script>
+</body>
+</html>
+
+
+
+
+
+

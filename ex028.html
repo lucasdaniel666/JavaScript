@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares e impares</title>
+</head>
+<body>
+    <script>
+        let resultadoDiv = document.getElementById("resultado");
+        let numerosImpares = "";
+        for (let i=0; i<=10; i++){
+            if (1 % 2 == 1){
+                numerosImpares += i + "<br>";
+            }
+        }
+        resultadoDiv.innerHTML = numerosImpares;
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <h1>Números pares</h1>
+    <div id="resultado"></div>
+    <script>
+        let contador = 0;
+        let numeros = "";
+        document.getElementById("Números: ")
+        while (contador <= 10){
+            if (contador % 2 === 0){
+                console.log(contador);
+                numeros.textContent += contador + ", ";
+            }
+            contador++;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    <h1>Comprimento das Strings</h1>
+    <div id="resultado"></div>
+    <script>  
+      function comprimentoStrings(arr) {
+        return arr.map(s => s.length);
+      }
+      
+      const strings = ["maçã", "banana", "cabelos"];
+      const comprimentos = comprimentoStrings(strings);
+      
+      document.getElementById("resultado").innerText = "Comprimentos: " + comprimentos.join(", ");
+    </script> 
+</body>
+</html>

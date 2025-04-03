@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrado</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script> // Função que recebe um array de objetos e retorna a pessoa mais velha
+        function pessoaMaisVelha(pessoas) {
+            let maisVelha = pessoas[0]; // Começamos assumindo que a primeira pessoa é a mais velha
+        
+            pessoas.forEach(pessoa => {
+                if (pessoa.idade > maisVelha.idade) {
+                    maisVelha = pessoa;
+                }
+            });
+        
+            return maisVelha;
+        }
+        
+        // Exemplo de uso:
+        const pessoasArray = [
+            { nome: 'Maria', idade: 30 },
+            { nome: 'João', idade: 25 },
+            { nome: 'Ana', idade: 40 }
+        ];
+        
+        const maisVelha = pessoaMaisVelha(pessoasArray);
+        console.log(`A pessoa mais velha é ${maisVelha.nome} com ${maisVelha.idade} anos.`);
+
+        // Exibindo o resultado no div#resultado
+        const resultado = pessoasArray.map(pessoa => `${pessoa.nome} - ${pessoa.idade} anos`).join('<br>');
+
+        document.getElementById('resultado').innerHTML = resultado;
+        
+        </script>
+</body>
+</html>

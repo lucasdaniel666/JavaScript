@@ -11,14 +11,13 @@
     <script>
         let contador = 0;
         let numeros = "";
-        document.getElementById("Números: ")
-        while (contador <= 10){
-            if (contador % 2 === 0){
-                console.log(contador);
-                numeros.textContent += contador + ", ";
+        while (contador <= 10) {
+            if (contador % 2 === 0) {
+                numeros += contador + ", ";  // Concatenar os números pares à string
             }
             contador++;
         }
+        document.getElementById("resultado").textContent = numeros;  // Mostrar os números na div com id "resultado"
     </script>
 </body>
 </html>

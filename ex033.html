@@ -7,15 +7,15 @@
 </head>
 <body>
     <h1> Manipulação de Eventos - onclick</h1>
-    <button onclick="alert('vc clicou no botao')"> clique aqui com onclick</button>
+    <button id="meuBotao">Clique aqui com addEventListener</button>
 
     <script>
-        //selecionar o button
+        // Selecionar o botão usando o id correto
         const botao = document.getElementById('meuBotao');
 
-        //adicionar o manipulador de evento click
-        botao.addEventListener('click', functio(){
-            alert('Botao clicado!!!');
+        // Adicionar o manipulador de evento click
+        botao.addEventListener('click', function() {  // Corrigido "functio" para "function"
+            alert('Botão clicado!!!');
         }); 
     </script>
 </body>
